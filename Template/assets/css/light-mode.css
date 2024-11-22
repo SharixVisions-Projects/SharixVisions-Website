@@ -538,7 +538,7 @@ body.light-mode .preloader .preloader-heading .load-text {
 .light-mode .works-section.style-2,
 .light-mode .service-section,
 .light-mode .tj-roll-section {
-	background-color: var(--tj-theme-h3-primary-1);
+	background-color: var(--tj-off-white);
 }
 .light-mode .faq-section,
 .light-mode .counter-section {
@@ -569,7 +569,7 @@ body.light-mode .preloader .preloader-heading .load-text {
 	color: var(--tj-theme-primary);
 }
 .light-mode .hero-section.style-3 .tj-btn-secondary:hover {
-	border-color: var(--tj-white);
+	border-color: var(--tj-theme-primary);
 	color: var(--tj-white);
 }
 

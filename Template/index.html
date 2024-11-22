@@ -30,6 +30,7 @@
    <!-- Place favicon.ico in the root directory -->
    <link rel="apple-touch-icon" href="/assets/img/sharik (2).png"  alt="Sharix Visions logo - Software and Web Development"/>
    <link rel="shortcut icon" type="image/png" href="/assets/img/sharik (2).png"  alt="Sharix Visions logo - Software and Web Development" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/animate.min.css" />
@@ -52,7 +53,7 @@
    <link rel="stylesheet" href="assets/css/responsive-3.css" />
 </head>
 
-<body>
+<body class="light-mode">
    <!-- Preloader Area Start -->
    <div class="preloader">
       <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
@@ -87,73 +88,42 @@
          <div class="row">
             <div class="col-12 d-flex flex-wrap align-items-center">
                <div class="logo-box">
-                  <a href="index.html">
+                  <a href="index-dark.html">
                      <img src="assets/img/sharik (2).png" alt="" />
                   </a>
                </div>
-
                <div class="header-info-list d-none d-md-inline-block">
                   <ul class="ul-reset">
-                     <h3>Sharix Visions</h3>
+                     <h3><a href="index.html">Sharix Visions</a></h3>
                   </ul>
                </div>
                <div class="header-menu" id="headerMenu">
                   <nav>
                      <ul>
-                        <li class="has-dropdown current-menu-ancestor">
-                           <a class="current-menu-item" href="index.html">Home</a>
+                        <li><a class="current-menu-item" href="index-dark.html">Home</a></li>
+                        <li><a href="about-light.html">About</a></li>
+                        <li><a href="services-light.html">Services</a></li>
+                        <li><a href="portfolio-light.html">Portfolios</a></li>
+                        <!-- <li class="has-dropdown">
+                           <a href="blog-light.html">Blog</a>
                            <ul class="sub-menu">
-                              <li class="has-dropdown current-menu-ancestor">
-                                 <a href="index.html">Dark Mode</a>
-                                 <ul class="sub-menu">
-                                    <li class="current-menu-item">
-                                       <a href="index.html">Home One</a>
-                                    </li>
-                                    <li>
-                                       <a href="index-2.html">Home Two</a>
-                                    </li>
-                                    <li>
-                                       <a href="index-3.html">Home Three</a>
-                                    </li>
-                                 </ul>
-                              </li>
-                              <li class="has-dropdown">
-                                 <a href="index-light.html">Light Mode</a>
-                                 <ul class="sub-menu">
-                                    <li>
-                                       <a href="index-light.html">Home One</a>
-                                    </li>
-                                    <li>
-                                       <a href="index-2-light.html">Home Two</a>
-                                    </li>
-                                    <li>
-                                       <a href="index-3-light.html">Home Three</a>
-                                    </li>
-                                 </ul>
-                              </li>
+                              <li><a href="blog-light.html">Blog</a></li>
+                              <li><a href="blog-details-light.html">Blog Details</a></li>
                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                         <li><a href="portfolio.html">Portfolios</a></li> 
-                         <li class="has-dropdown">
-                           <a href="blog.html">Blog</a>
-                           <ul class="sub-menu">
-                              <li>
-                                 <a href="blog.html">Blog</a>
-                              </li>
-                              <li>
-                                 <a href="blog-details.html">Blog Details</a>
-                              </li>
-                           </ul>
-                        </li> 
-                         <li><a href="contact.html">Contact</a></li> 
+                        </li> -->
+                        <li><a href="contact-light.html">Contact</a></li>
                      </ul>
                   </nav>
                </div>
                <div class="mobile-menu d-lg-none"></div>
                <div class="header-button">
-                  <a href="contact.html" class="btn tj-btn-primary">Lets Talk</a>
+                  <a href="contact-light.html" class="btn tj-btn-primary">Let's Talk</a>
+                  <button onclick="switchMode()" class="btn tj-btn-primary" id="mode-switch">
+                     <i id="mode-icon" class="fas fa-moon"></i>
+               </div>
+               <!-- New Button for Mode Switching -->
+               <div class="header-button">
+                  
                </div>
                <div class="menu-bar d-lg-none">
                   <button>
@@ -172,7 +142,7 @@
          <div class="row">
             <div class="col-12 d-flex flex-wrap align-items-center">
                <div class="logo-box">
-                  <a href="index.html">
+                  <a href="index-dark.html">
                      <img src="assets/img/sharik (2).png" alt="" />
                   </a>
                </div>
@@ -184,14 +154,15 @@
                <div class="header-menu">
                   <nav>
                      <ul>
-                        <li class="has-dropdown current-menu-ancestor">
-                           <a class="current-menu-item" href="index.html">Home</a>
-                           <ul class="sub-menu">
-                              <li class="has-dropdown current-menu-ancestor">
-                                 <a href="index.html">Dark Mode</a>
+                        <!-- <li class="has-dropdown current-menu-ancestor"></li>  if you  want to add + and - with home tab just uncomment it -->
+                        <li class=""> 
+                           <a href="index-dark.html">Home</a>
+                           <!-- <ul class="sub-menu">
+                              <li class="has-dropdown">
+                                 <a href="index-dark.html">Dark Mode</a>
                                  <ul class="sub-menu">
-                                    <li class="current-menu-item">
-                                       <a href="index.html">Home One</a>
+                                    <li>
+                                       <a href="index-dark.html">Home One</a>
                                     </li>
                                     <li>
                                        <a href="index-2.html">Home Two</a>
@@ -201,11 +172,11 @@
                                     </li>
                                  </ul>
                               </li>
-                              <li class="has-dropdown">
-                                 <a href="index-light.html">Light Mode</a>
+                              <li class="has-dropdown current-menu-ancestor">
+                                 <a class="current-menu-item" href="index.html">Light Mode</a>
                                  <ul class="sub-menu">
-                                    <li>
-                                       <a href="index-light.html">Home One</a>
+                                    <li class="current-menu-item">
+                                       <a href="index.html">Home One</a>
                                     </li>
                                     <li>
                                        <a href="index-2-light.html">Home Two</a>
@@ -215,29 +186,32 @@
                                     </li>
                                  </ul>
                               </li>
-                           </ul>
+                           </ul> -->
                         </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                         <li><a href="portfolio.html">Portfolios</a></li> 
-                        <li class="has-dropdown">
-                           <a href="blog.html">Blog</a>
+                        <li><a href="about-light.html">About</a></li>
+                        <li><a href="services-light.html">Services</a></li>
+                         <li><a href="portfolio-light.html">Portfolios</a></li> 
+                         <!-- <li class="has-dropdown">
+                           <a href="blog-light.html">Blog</a>
                            <ul class="sub-menu">
                               <li>
-                                 <a href="blog.html">Blog</a>
+                                 <a href="blog-light.html">Blog</a>
                               </li>
                               <li>
-                                 <a href="blog-details.html">Blog Details</a>
+                                 <a href="blog-details-light.html">Blog Details</a>
                               </li>
                            </ul>
-                        </li> 
-                   <li><a href="contact.html">Contact</a></li> 
+                        </li>  -->
+                        <li><a href="contact-light.html">Contact</a></li> 
                      </ul>
                   </nav>
                </div>
                <div class="mobile-menu d-lg-none"></div>
                <div class="header-button">
-                  <a href="contact.html" class="btn tj-btn-primary">Lets Talk</a>
+                  <a href="contact-light.html" class="btn tj-btn-primary">Lets Talk</a>
+                  <button onclick="switchMode()" class="btn tj-btn-primary" id="mode-switch">
+                     <i id="mode-icon" class="fas fa-moon"></i>
+                     
                </div>
                <div class="menu-bar d-lg-none">
                   <button>
@@ -270,12 +244,14 @@
 
                      <div class="hero-image-box d-md-none text-center">
                         <img src="assets/img/hero/logo1.png" alt="" />
-                    </div>
-                    
+                     </div>
 
-                     <!-- <p class="lead"></p> -->
-                     <div class="button-box d-flex flex-wrap align-items-center">
-                        <a href="contact.html" class="btn tj-btn-secondary">Get in Touch<i class="arrow-icon fas fa-arrow-right"></i></a>
+                     <!-- <p class="lead">
+                        As the founder and lead developer at Sharix Visions, I specialize in breaking down complex user experience challenges to deliver innovative, 
+                        integrity-focused solutions. Our work connects and empowers users across the globe.
+                     </p> -->
+                      <div class="button-box d-flex flex-wrap align-items-center">
+                        <a href="contact-light.html" class="btn tj-btn-secondary">Get in Touch <i class="arrow-icon fas fa-arrow-right"></i></a>
                         <!-- <ul class="ul-reset social-icons">
                            <li>
                               <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -295,11 +271,12 @@
                </div>
                <div class="col-md-6 d-none d-md-block">
                   <div class="hero-image-box text-center">
-                     <img src="assets/img/hero/logo1.png" alt="" class="rounded-image"/>
+                     <img src="assets/img/hero/logo1.png" alt="" />
                   </div>
                </div>
             </div>
-             <!-- <div class="funfact-area">
+<!-- 
+            <div class="funfact-area">
                <div class="row">
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
@@ -337,121 +314,248 @@
    <div class="slide-roll">
       <div class="roll-box roll-box-revers">
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Staff Augmentation</h5>
+               <h5 class="title" style="color: #8750f7;">Staff Augmentation</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Software Development</h5>
+               <h5 class="title"  style="color: #8750f7;">Software Development</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">App development</h5>
+               <h5 class="title"  style="color: #8750f7;">App development</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Web development</h5>
+               <h5 class="title"  style="color: #8750f7;">Web development</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">UI/UX Designing</h5>
+               <h5 class="title"  style="color: #8750f7;">UI/UX Designing</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Digital Marketing</h5>
+               <h5 class="title"  style="color: #8750f7;">Digital Marketing</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Ecommerce & Dropshipping</h5>
+               <h5 class="title"  style="color: #8750f7;">Ecommerce & Dropshipping</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Staff Augmentation</h5>
+               <h5 class="title"  style="color: #8750f7;">Staff Augmentation</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Software Development</h5>
+               <h5 class="title"  style="color: #8750f7;">Software Development</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">App development</h5>
+               <h5 class="title"  style="color: #8750f7;">App development</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Web development</h5>
+               <h5 class="title"  style="color: #8750f7;">Web development</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">UI/UX Designing</h5>
+               <h5 class="title"  style="color: #8750f7;">UI/UX Designing</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Digital Marketing</h5>
+               <h5 class="title"  style="color: #8750f7;">Digital Marketing</h5>
             </div>
          </div>
          <div class="roll-item">
-            <div class="roll-icon">
-               <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon" />
-            </div>
+            <div
+            class="roll-icon"
+            style="
+              width: 24px;
+              height: 24px;
+              background:#8750f7 ;
+              -webkit-mask: url('assets/img/icons/star.svg') no-repeat center;
+              mask: url('assets/img/icons/star.svg') no-repeat center;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+            "
+          ></div>
             <div class="roll-title">
-               <h5 class="title">Ecommerce & Dropshipping</h5>
+               <h5 class="title"  style="color: #8750f7;">Ecommerce & Dropshipping</h5>
             </div>
          </div>
       </div>
    </div>
 </section>
 <!-- end: Roll Area -->
+
 
 
       <!-- SERVICES SECTION START -->
@@ -462,20 +566,18 @@
                   <div class="section-header text-center">
                      <h2 class="section-title wow fadeInUp" data-wow-delay=".1s">Our Quality Services</h2>
                      <p class="wow fadeInUp" data-wow-delay=".2s">
-                        We put your ideas and thus your wishes in the form of a unique Softwares, Apps & web project that inspires you and
-                        you customers.
+                        We put your ideas and thus your wishes in the form of unique Softwares, Apps & web projects that inspire you and your customers.
                      </p>
                   </div>
                </div>
             </div>
-
+      
             <div class="row">
                <div class="col-md-12">
                   <div class="services-widget position-relative">
-                     <div class="service-item current d-flex flex-wrap align-items-center wow fadeInUp"
-                        data-wow-delay=".1s">
+                     <div class="service-item current d-flex flex-wrap align-items-center wow fadeInUp" data-wow-delay=".1s">
                         <div class="left-box d-flex flex-wrap align-items-center">
-                           <span class="fas fa-users-cog", style="font-size: 26px;"></span>
+                           <span class="fas fa-users-cog" style="font-size: 26px;"></span>
                            <h3 class="service-title">Staff Augmentation</h3>
                         </div>
                         <div class="right-box">
@@ -486,21 +588,54 @@
                         <i class="flaticon-up-right-arrow"></i>
                         <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
                      </div>
-                     <div class="service-item current d-flex flex-wrap align-items-center wow fadeInUp"
-                        data-wow-delay=".1s">
+                     <div
+                     class="service-item current software-development d-flex flex-wrap align-items-center wow fadeInUp"
+                     data-wow-delay=".1s"
+                     style="cursor: pointer;"
+                     onmouseover="
+                       this.querySelector('.service-title').style.color = 'white';
+                       this.querySelector('p').style.color = 'white';
+                       this.querySelector('.flaticon-up-right-arrow').style.color = 'white';
+                       this.querySelector('.flaticon-up-right-arrow').style.transform = 'rotate(0deg)';
+                     "
+                     onmouseout="
+                       this.querySelector('.service-title').style.color = '#8750f7';
+                       this.querySelector('p').style.color = '#2a1454';
+                       this.querySelector('.flaticon-up-right-arrow').style.color = '#8750f7';
+                       this.querySelector('.flaticon-up-right-arrow').style.transform = 'rotate(90deg)';
+                     "
+                   >
+                     <div class="left-box d-flex flex-wrap align-items-center">
+                       <span class="fas fa-code" style="font-size: 26px;"></span>
+                       <h3 class="service-title" style="color: #8750f7;">Software Development</h3>
+                     </div>
+                     <div class="right-box">
+                       <p style="color: #2a1454;">
+                         At Sharix Visions, we deliver cutting-edge software solutions tailored to your business needs. From concept to deployment, our team ensures high-performance, scalable, and reliable software that drives efficiency and growth.
+                       </p>
+                     </div>
+                     <i class="flaticon-up-right-arrow" style="color: #8750f7; transition: transform 0.3s ease, color 0.3s ease; transform: rotate(90deg);"></i>
+                     <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
+                   </div>
+                   
+                   
+                   
+
+<!--       
+                     <div class="service-item current software-development d-flex flex-wrap align-items-center wow fadeInUp" data-wow-delay=".1s">
                         <div class="left-box d-flex flex-wrap align-items-center">
-                           <span class="fas fa-code", style="font-size: 26px;"></span>
-                           <h3 class="service-title">Software Developement</h3>
+                            <span class="fas fa-code" style="font-size: 26px;"></span>
+                            <h3 class="service-title" style="color:#8750f7 ;">Software Development</h3>
                         </div>
                         <div class="right-box">
-                           <p>
-                              At Sharix Visions, we deliver cutting-edge software solutions tailored to your business needs. From concept to deployment, our team ensures 
-                              high-performance, scalable, and reliable software that drives efficiency and growth.
-                           </p>
+                            <p style="color:#2a1454">
+                                At Sharix Visions, we deliver cutting-edge software solutions tailored to your business needs. From concept to deployment, our team ensures high-performance, scalable, and reliable software that drives efficiency and growth.
+                            </p>
                         </div>
                         <i class="flaticon-up-right-arrow"></i>
                         <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
-                     </div>
+                    </div> -->
+                    
                      <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp" data-wow-delay=".3s">
                         <div class="left-box d-flex flex-wrap align-items-center">
                            <span class="fas fa-mobile-alt", style="font-size: 28px;"></span>
@@ -578,10 +713,11 @@
       <!-- SERVICES SECTION END -->
 
       <!-- start: Service Popup -->
-       <div id="service-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+      <div id="service-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
          <div class="popup_modal_img">
             <img src="./assets/img/services/modal-img.jpg" alt="" />
          </div>
+
          <div class="popup_modal_content">
             <div class="service_details">
                <div class="row">
@@ -679,7 +815,7 @@
                               <h3 class="title">Get in Touch</h3>
                            </div>
 
-                           <form action="index.html">
+                           <form action="index-dark.html">
                               <div class="form_group">
                                  <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" />
                               </div>
@@ -823,6 +959,7 @@
          <div class="popup_modal_img">
             <img src="./assets/img/portfolio/modal-img.jpg" alt="" />
          </div>
+
          <div class="popup_modal_content">
             <div class="portfolio_info">
                <div class="portfolio_info_text">
@@ -855,6 +992,7 @@
                   </div>
                </div>
             </div>
+
             <div class="portfolio_gallery owl-carousel">
                <div class="gallery_item">
                   <img src="./assets/img/portfolio-gallery/p-gallery-1.jpg" alt="" />
@@ -869,6 +1007,7 @@
                   <img src="./assets/img/portfolio-gallery/p-gallery-4.jpg" alt="" />
                </div>
             </div>
+
             <div class="portfolio_description">
                <h2 class="title">Project Description</h2>
                <div class="desc">
@@ -887,6 +1026,7 @@
                   </p>
                </div>
             </div>
+
             <div class="portfolio_story_approach">
                <div class="portfolio_story">
                   <div class="story_title">
@@ -929,6 +1069,7 @@
                   </div>
                </div>
             </div>
+
             <div class="portfolio_navigation">
                <div class="navigation_item prev-project">
                   <a href="#" class="project">
@@ -939,6 +1080,7 @@
                      </div>
                   </a>
                </div>
+
                <div class="navigation_item next-project">
                   <a href="#" class="project">
                      <div class="nav_project">
@@ -1146,13 +1288,14 @@
                         super services</p>
                   </div>
                </div>
+
                <div class="col-lg-7 col-xl-6 offset-xl-1">
                   <div class="testimonials-widget wow fadeInRight" data-wow-delay=".5s">
                      <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item">
                            <!-- <div class="top-area d-flex flex-wrap justify-content-between">
                               <div class="logo-box">
-                                 <img src="assets/img/testimonials/logo/1.png" alt="" />
+                                 <img src="assets/img/testimonials/logo/1-dark.png" alt="" />
                               </div>
                               <div class="image-box">
                                  <img src="assets/img/testimonials/user/1.jpg" alt="" />
@@ -1193,7 +1336,7 @@
                         <div class="testimonial-item">
                            <!-- <div class="top-area d-flex flex-wrap justify-content-between">
                               <div class="logo-box">
-                                 <img src="assets/img/testimonials/logo/2.png" alt="" />
+                                 <img src="assets/img/testimonials/logo/2-dark.png" alt="" />
                               </div>
                               <div class="image-box">
                                  <img src="assets/img/testimonials/user/2.jpg" alt="" />
@@ -1234,7 +1377,7 @@
                         <!-- <div class="testimonial-item">
                            <div class="top-area d-flex flex-wrap justify-content-between">
                               <div class="logo-box">
-                                 <img src="assets/img/testimonials/logo/1.png" alt="" />
+                                 <img src="assets/img/testimonials/logo/1-dark.png" alt="" />
                               </div>
                               <div class="image-box">
                                  <img src="assets/img/testimonials/user/1.jpg" alt="" />
@@ -1276,7 +1419,7 @@
                         <div class="testimonial-item">
                            <div class="top-area d-flex flex-wrap justify-content-between">
                               <div class="logo-box">
-                                 <img src="assets/img/testimonials/logo/2.png" alt="" />
+                                 <img src="assets/img/testimonials/logo/2-dark.png" alt="" />
                               </div>
                               <div class="image-box">
                                  <img src="assets/img/testimonials/user/2.jpg" alt="" />
@@ -1314,11 +1457,11 @@
                               value to my business.</p>
                            <h4 class="name">Tim Bailey</h4>
                            <span class="designation">SEO Specialist, Theme Junction</span>
-                        </div> -->
-                        <!-- <div class="testimonial-item">
+                        </div>
+                        <div class="testimonial-item">
                            <div class="top-area d-flex flex-wrap justify-content-between">
                               <div class="logo-box">
-                                 <img src="assets/img/testimonials/logo/1.png" alt="" />
+                                 <img src="assets/img/testimonials/logo/1-dark.png" alt="" />
                               </div>
                               <div class="image-box">
                                  <img src="assets/img/testimonials/user/1.jpg" alt="" />
@@ -1360,7 +1503,7 @@
                         <div class="testimonial-item">
                            <div class="top-area d-flex flex-wrap justify-content-between">
                               <div class="logo-box">
-                                 <img src="assets/img/testimonials/logo/2.png" alt="" />
+                                 <img src="assets/img/testimonials/logo/2-dark.png" alt="" />
                               </div>
                               <div class="image-box">
                                  <img src="assets/img/testimonials/user/2.jpg" alt="" />
@@ -1398,8 +1541,8 @@
                               value to my business.</p>
                            <h4 class="name">Tim Bailey</h4>
                            <span class="designation">SEO Specialist, Theme Junction</span>
-                        </div> -->
-                     </div>
+                        </div>
+                     </div> -->
                   </div>
                </div>
             </div>
@@ -1408,7 +1551,7 @@
       <!-- TESTIMONIAL SECTION END -->
 
       <!-- BLOG SECTION STAR -->
-      <section class="blog-section" id="blog-section">
+      <!-- <section class="blog-section" id="blog-section">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -1425,7 +1568,7 @@
                <div class="col-lg-4 col-md-6">
                   <div class="blog-item wow fadeInUp" data-wow-delay=".5s">
                      <div class="blog-thumb">
-                        <a href="blog-details.html">
+                        <a href="blog-details-light.html">
                            <img src="assets/img/blog/1.jpg" alt="" />
                         </a>
                         <a href="#" class="category">Tutorial</a>
@@ -1438,14 +1581,14 @@
                               <li><i class="fa-light fa-comments"></i> <a href="#">Comment (0)</a></li>
                            </ul>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">top 10 ui ux designers</a></h3>
+                        <h3 class="blog-title"><a href="blog-details-light.html">top 10 ui ux designers</a></h3>
                      </div>
                   </div>
                </div>
                <div class="col-lg-4 col-md-6">
                   <div class="blog-item wow fadeInUp" data-wow-delay=".6s">
                      <div class="blog-thumb">
-                        <a href="blog-details.html">
+                        <a href="blog-details-light.html">
                            <img src="assets/img/blog/2.jpg" alt="" />
                         </a>
                         <a href="#" class="category">TIPS</a>
@@ -1457,14 +1600,14 @@
                               <li><i class="fa-light fa-comments"></i> <a href="#">Comment (0)</a></li>
                            </ul>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">App Development Guides</a></h3>
+                        <h3 class="blog-title"><a href="blog-details-light.html">App Development Guides</a></h3>
                      </div>
                   </div>
                </div>
                <div class="col-lg-4 col-md-6">
                   <div class="blog-item wow fadeInUp" data-wow-delay=".7s">
                      <div class="blog-thumb">
-                        <a href="blog-details.html">
+                        <a href="blog-details-light.html">
                            <img src="assets/img/blog/3.jpg" alt="" />
                         </a>
                         <a href="#" class="category">FREEBIES</a>
@@ -1476,13 +1619,13 @@
                               <li><i class="fa-light fa-comments"></i> <a href="#">Comment (0)</a></li>
                            </ul>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">learn graphic design free</a></h3>
+                        <h3 class="blog-title"><a href="blog-details-light.html">learn graphic design free</a></h3>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
       <!-- BLOG SECTION END -->
 
       <!-- CONTACT SECTION START -->
@@ -1532,8 +1675,7 @@
                                        <option value="web">Application development</option>
                                        <option value="web">Website development</option>
                                        <option value="uxui">UI/UX Design</option>
-                                       <option value="braning">Digital Marketing</option>
-                                       <option value="braning">Ecommerce & Dropshipping Management</option>
+                                       <option value="braning">Digital Marketing and E-Commerce Solutions</option>
                                     </select>
                                  </div>
                               </div>
@@ -1560,8 +1702,8 @@
                            data-wow-delay=".4s">
                            <!-- <div class="icon-box">
                               <i class="flaticon-phone-call"></i>
-                           </div> -->
-                           <!-- <div class="text-box">
+                           </div>
+                           <div class="text-box">
                               <p>Phone</p>
                               <a href="tel:0123456789">+01 123 654 8096</a>
                            </div> -->
@@ -1583,7 +1725,7 @@
                            </div>
                            <div class="text-box">
                               <p>Address</p>
-                              <a href="https://www.google.com/maps/search/?api=1&query=Civic+Center,+Gulberg+Greens,+Islamabad,+Pakistan" target="_blank">Civic Center, Gulberg Greens<br />Islamabad, Pakistan</a>
+                              <a href="https://www.google.com/maps?q=Sharix+Visions,+Gulberg+Expy,+near+Gulberg+Headquarter,+Gulberg+Greens+Block+B+Gulberg,+Greens,+Islamabad,+Islamabad+Capital+Territory+44600" target="_blank">Gulberg Square, Gulberg Greens<br />Islamabad, Pakistan</a>
                            </div>
                         </li>
                      </ul>
@@ -1646,7 +1788,7 @@
                <div class="footer-menu">
                   <nav>
                      <ul>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="about-light.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolios</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -1662,7 +1804,7 @@
    </footer>
    <!-- FOOTER AREA END -->
 
-   <!-- JSS here -->
+   <!-- JS here -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/bootstrap.bundle.min.js"></script>
    <script src="assets/js/nice-select.min.js"></script>
@@ -1682,21 +1824,34 @@
    <script src="assets/js/validate.min.js"></script>
    <script src="assets/js/meanmenu.js"></script>
    <script src="assets/js/main.js"></script>
-   <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Sharix Visions",
-        "url": "https://sharixvisions.com",
-        "logo": "https://sharixvisions.com/assets/img/sharik.png",
-        "description": "Sharix Visions offers expert software, app, and web development, alongside Amazon PPC and listing optimization services.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+923159594092",
-          "contactType": "Customer Service"
-        }
+   <script>
+      function switchMode() {
+         const currentURL = window.location.href;
+         const modeIcon = document.getElementById('mode-icon');
+   
+         // Toggle between dark and light mode pages
+         if (currentURL.includes("index.html")) {
+            window.location.href = "index-dark.html"; // Switch to dark mode
+         } else {
+            window.location.href = "index-dark.html"; // Switch to light mode
+         }
       }
-      </script>
+   
+      // Function to set the correct icon based on the current page
+      function setInitialIcon() {
+         const currentURL = window.location.href;
+         const modeIcon = document.getElementById('mode-icon');
+   
+         // Check URL and set icon (sun for light mode, moon for dark mode)
+         if (currentURL.includes("index-dark.html")) {
+            modeIcon.classList.remove('fa-sun');
+            modeIcon.classList.add('fa-moon');
+         } 
+      }
+   
+      // Set the initial icon when the page loads
+      window.onload = setInitialIcon;
+   </script>
 </body>
 
 </html>
