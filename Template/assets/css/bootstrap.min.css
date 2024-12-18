@@ -560,6 +560,7 @@ legend {
     line-height: inherit
 }
 
+
 @media (min-width:1200px) {
     legend {
         font-size: 1.5rem
@@ -776,6 +777,7 @@ progress {
     color: var(--bs-secondary-color)
 }
 
+
 .container,
 .container-fluid,
 .container-lg,
@@ -838,7 +840,7 @@ progress {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1320px
+        max-width: 1600px
     }
 }
 

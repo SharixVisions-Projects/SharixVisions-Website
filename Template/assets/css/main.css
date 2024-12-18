@@ -344,6 +344,23 @@ a h6:hover {
 	padding: 17px 30px;
 	line-height: 1;
 }
+.header-button1 .btn {
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.header-button1 .btn i {
+    margin-left: 8px; /* Space between text and icon */
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: rotate(90deg); /* Initial rotation */
+}
+
+.header-button1 .btn:hover i {
+    transform: rotate(45deg); /* Rotate to point up and right */
+    color: #ffffff; /* Change icon color on hover (optional) */
+}
+
 .tj-btn-primary-2 .icon_box {
 	position: relative;
 	display: inline-flex;
@@ -1469,15 +1486,28 @@ body.loaded {
 		var(--tj-theme-secondary) 0%,
 		var(--tj-theme-primary) 100%
 	);
-	background: linear-gradient(
+	
+	/* background: linear-gradient(
 		260deg,
 		var(--tj-theme-secondary) 0%,
 		var(--tj-theme-primary) 100%
-	);
+	); */
 	-webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+.portfolio-item {
+	margin-bottom: 20px;
+ }
+ 
+ .portfolio-box {
+	transition: height 0.3s ease-in-out;
+ }
+ 
+ #toggle-projects {
+	margin-top: 20px;
+ }
+ 
 .services-widget i {
 	font-size: 20px;
 	line-height: 1;
@@ -1518,7 +1548,7 @@ body.loaded {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 60%;
 	height: 100%;
 	z-index: 1;
 }
@@ -1711,6 +1741,29 @@ body.loaded {
 		var(--tj-theme-primary) 100%
 	);
 }
+.portfolio-img {
+    height: 50vh;
+}
+/* }
+.portfolio-box{
+	height: 90vh;
+}
+.row2{
+	height: 250vh;
+} */
+.portfolio-section {
+	margin-top: 50px;
+  }
+  
+  /* .portfolio-item {
+	display: none;
+	text-align: center;
+	margin-bottom: 20px;
+	background: #f7f7f7;
+	padding: 15px;
+	border-radius: 8px;
+  }
+   */
 .portfolio-box .portfolio-item:hover .content-box {
 	opacity: 1;
 	visibility: visible;
